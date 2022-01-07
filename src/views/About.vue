@@ -1,6 +1,6 @@
 <template>
   <div class="about pa-6" >
-    <h1>About {{$store.state.appTitle}}</h1>
+    <h1>About Me</h1>
     <p>
     Name: Kanmani Thangapandian
     </p>
