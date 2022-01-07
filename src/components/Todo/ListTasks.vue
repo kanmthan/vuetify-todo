@@ -6,11 +6,16 @@
    <draggable 
    v-model="tasks"
    handle=".handle">
+   <div v-if="tasks.length" >
     <task 
      v-for="task in tasks" 
      :key=task.id
      :task="task"
      />
+   </div>
+   <div class="no-data text-h5 primary--text" v-else>
+        No Data Matches
+    </div>
    </draggable>
     </v-list>
 </template>
@@ -37,6 +42,11 @@ components: {
 }
 </script>
 
-<style>
-
+<style lang="sass">
+.no-data
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+  
 </style>
